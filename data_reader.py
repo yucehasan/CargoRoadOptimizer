@@ -31,13 +31,13 @@ def intersect(Ax, Ay, Bx, By, Cx, Cy, R):
     # tangent point to circle is E or line doesn't touch circle
     else:
         return False
-
+'''
 locations = pd.read_excel('data.xlsx', sheet_name='Locations')
 
 loc_x_coordinates = locations['X Coordinate'].values.tolist()
 loc_y_coordinates = locations['Y Coordinate'].values.tolist()
 distances = []
-'''for i in range(30):
+for i in range(30):
     for j in range(30):
         if i != j:
             x1 = loc_x_coordinates[i]
@@ -46,27 +46,29 @@ distances = []
             y2 = loc_y_coordinates[j]
             d = math.sqrt(pow(x2 - x1, 2) + pow(y2 - y1, 2))
             distances.append(d)
+        else:
+            distances.append(0)
 
-print(distances)
-print(len(distances))
-'''
-'''
+for i in range(30):
+    for j in range(30):
+        print(distances[i*30+j], end=", ")
+    print()
+
+
 Ax = float(input("X coordinate of point A:"))
 Ay = float(input("Y coordinate of point A:"))
 Bx = float(input("X coordinate of point B:"))
 By = float(input("Y coordinate of point B:"))
 Cx = float(input("X coordinate of center of circle:"))
 Cy = float(input("Y coordinate of center of circle:"))
-R  = float(input("Radius of circle:"))'''
+R  = float(input("Radius of circle:"))
 
 storms = pd.read_excel('data.xlsx', sheet_name='Storms')
-material = pd.read_excel('data.xlsx', sheet_name='Road Material')
-
 st_x_coordinates = storms['X Coordinate'].values.tolist()
 st_y_coordinates = storms['Y Coordinate'].values.tolist()
 st_radius = storms['Radius'].values.tolist()
 
-materials = material['Road Material'].values.tolist()
+
 
 
 usable = []
@@ -90,13 +92,17 @@ for i in range(30):
             usable.append(0)
         else:
             usable.append(1)
-
-'''for x in range(len(usable)):
+for x in range(len(usable)):
     print(usable[x], end=' ')
     if x % 30 == 29:
         print()
 '''
 
+material = pd.read_excel('data.xlsx', sheet_name='Road Material')
+
+
+
+materials = material['Road Material'].values.tolist()
 materials_int = []
 
 for m in materials:
@@ -104,11 +110,14 @@ for m in materials:
         materials_int.append(100)
     elif m == 'Concrete':
         materials_int.append(65)
-    else:
+    elif m == "Gravel":
         materials_int.append(35)
-
-for x in range(len(materials_int)):
-    if x % 30 != 29:
-        print(materials_int[x], end=', ')
     else:
+        materials_int.append(0)
+count = 0
+for x in range(len(materials_int)):
+    if(count % 30 == 0):
         print()
+        count = 0
+    print(materials_int[x], end=', ')
+    count += 1
