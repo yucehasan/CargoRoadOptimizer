@@ -17,6 +17,7 @@ a_ij:array(locations,locations) of real		!availability of the road between locat
 
 X_ij:array(locations,locations) of mpvar		!1, if truck moves directly from location i to location j
 									!0, otherwise
+O_i: array(locations) of mpvar !visiting order
   Objective:linctr
 end-declarations
 
@@ -128,7 +129,15 @@ forall(i in locations)
 forall(i in locations, j in locations)
 	X_ij(i,j) is_binary
 
+forall(i in locations) do
+    O_i(i) <= getsize(locations)
+    O_i(i) is_integer
+end-do
+    
+forall(i in locations, j in locations | j <> 1)
+    O_i(i) - O_i(j) + 1 <= (1 - X_ij(i, j)) * getsize(locations) ! M = getsize(locations) 
 
+O_i(1) = 1
 
 ! The objective function is:
 
