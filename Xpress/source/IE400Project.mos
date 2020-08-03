@@ -19,6 +19,7 @@ X_ij:array(locations,locations) of mpvar		!1, if truck moves directly from locat
 									!0, otherwise
 O_i: array(locations) of mpvar !visiting order
   Objective:linctr
+travel_time: mpvar
 end-declarations
 
 d_ij::[ 0, 188.2101669118973, 196.85969925857677, 228.80234041283384, 206.1767547902372, 249.60589638961744, 99.73511697568904, 281.52748619926257, 201.23778370480133, 200.58211809730204, 312.4057235112532, 270.36855429314994, 143.2791469478797, 127.63010971585975, 259.1446673609837, 341.81048519778494, 139.10047411998715, 346.6596742956682, 294.09194790654664, 253.21120303950505, 251.76040270821147, 205.04082948357672, 128.87798368570134, 412.6843417889064, 101.45644378440592, 130.870699225715, 254.1540272994886, 317.8485415736955, 268.0844587622466, 358.7592522897643,
@@ -139,11 +140,10 @@ forall(i in locations, j in locations | j <> 1)
 
 O_i(1) = 1
 
+travel_time = sum(i in locations)(sum(j in locations) X_ij(i,j) * d_ij(i,j) / s_ij(i,j) )
 ! The objective function is:
 
-Obj:= sum(i in locations)(sum(j in locations) X_ij(i,j) * d_ij(i,j) / s_ij(i,j) )
-
-minimize(Obj)
+Obj:= travel_time
 
 forall( i in locations )
     forall(j in locations)
