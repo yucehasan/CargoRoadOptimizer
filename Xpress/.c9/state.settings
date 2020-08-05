@@ -15,7 +15,7 @@
     },
     "console": {
         "@expanded": true,
-        "@height": 311.60003662109375,
+        "@height": 115,
         "@maximized": "false",
         "json()": {
             "meta": {
@@ -38,12 +38,12 @@
                             "timestamp": 1596125209164
                         },
                         "filter": true,
-                        "title": "source/IE400Project.mos - Stopped",
-                        "tooltip": "source/IE400Project.mos - Stopped",
+                        "title": "source/IE400Project.mos - Idle",
+                        "tooltip": "source/IE400Project.mos - Idle",
                         "output": {
                             "id": "output333230",
-                            "width": 1269,
-                            "height": 280,
+                            "width": 756,
+                            "height": 83,
                             "config": {
                                 "runner": "Mosel",
                                 "command": "source/IE400Project.mos",
@@ -67,7 +67,7 @@
             "@acestatus": 1,
             "@base-step-wizard": 2,
             "@divider": 4,
-            "@document": 5,
+            "@document": 4,
             "@editorswitch": 1,
             "@fico.vdl.attributes-panel": 1,
             "@fico.vdl.palette-panel": 1,
@@ -75,9 +75,9 @@
             "@menu": 3,
             "@menuitem": 8,
             "@pane": 2,
-            "@session": 5,
+            "@session": 3,
             "@tab": 5,
-            "@undoManager": 5,
+            "@undoManager": 4,
             "@welcome": 1
         }
     },
@@ -91,10 +91,10 @@
     "local": {
         "window": {
             "@fullscreen": false,
-            "@maximized": true,
+            "@maximized": false,
             "@minimized": false,
-            "@position": "-11:0",
-            "@size": "988:803"
+            "@position": "522:0",
+            "@size": "984:760"
         }
     },
     "menus": {
@@ -114,7 +114,7 @@
     },
     "panels": {
         "@active-left": "tree",
-        "@active-right": "fico.om.sidebar",
+        "@active-right": "none",
         "@width-right": 36,
         "commands.panel": {
             "@enabled": "false",
@@ -157,9 +157,7 @@
         "expanded": {
             "json()": [
                 "/",
-                "/source",
-                "/model_resources",
-                "/client_resources"
+                "/source"
             ]
         }
     },
@@ -172,8 +170,8 @@
             "meta": {
                 "accessList": [
                     "tab1",
-                    "tab3",
-                    "tab0"
+                    "tab0",
+                    "tab3"
                 ]
             },
             "name": "pane0",
@@ -183,20 +181,21 @@
                     "name": "tab0",
                     "path": "/readme.html",
                     "className": [
-                        "tab0"
+                        "tab0",
+                        "changed"
                     ],
                     "document": {
-                        "changed": false,
                         "meta": {
                             "welcome": true,
                             "newOnError": true,
                             "newfile": true,
-                            "timestamp": 1596122243187
+                            "timestamp": 1596471605862
                         },
                         "filter": true,
                         "title": "Welcome",
                         "tooltip": "/readme.html",
-                        "welcome": {}
+                        "welcome": {},
+                        "changed": false
                     },
                     "editorType": "welcome",
                     "active": false
@@ -207,12 +206,13 @@
                     "path": "/source/IE400Project.mos",
                     "className": [
                         "tab1",
-                        "focus"
+                        "focus",
+                        "changed"
                     ],
                     "document": {
-                        "changed": false,
+                        "changed": true,
                         "meta": {
-                            "timestamp": 1596125205830
+                            "timestamp": 1596471781567
                         },
                         "filter": true,
                         "title": "IE400Project.mos",
@@ -230,14 +230,39 @@
                         "tab3"
                     ],
                     "document": {
-                        "changed": false,
-                        "meta": {
-                            "timestamp": 1596122229498
-                        },
                         "filter": true,
                         "title": "quick_start.xml",
                         "tooltip": "/quick_start.xml",
-                        "ace": {}
+                        "ace": {
+                            "folds": [],
+                            "scrolltop": 0,
+                            "scrollleft": 0,
+                            "selection": {
+                                "start": {
+                                    "row": 0,
+                                    "column": 0
+                                },
+                                "end": {
+                                    "row": 0,
+                                    "column": 0
+                                },
+                                "isBackwards": true
+                            },
+                            "options": {
+                                "guessTabSize": true,
+                                "useWrapMode": false,
+                                "wrapToView": true
+                            },
+                            "firstLineState": {
+                                "row": 134,
+                                "mode": "ace/mode/xml"
+                            }
+                        },
+                        "hash": "547529a3ffa54d277eb574b061919629484561bb",
+                        "meta": {
+                            "timestamp": 1596122229498
+                        },
+                        "changed": false
                     },
                     "editorType": "ace",
                     "active": false
@@ -250,7 +275,7 @@
     },
     "tree_selection": {
         "json()": [
-            "/source/quick_start.mos"
+            "/"
         ]
     },
     "welcome": {
