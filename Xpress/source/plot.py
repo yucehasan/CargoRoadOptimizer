@@ -6,8 +6,8 @@ import matplotlib.pyplot as plt
 import sys
 
 def main():
-    excel = sys.argv[1]
-    f = open(sys.argv[2])
+    excel = "data.xlsx"
+    f = open("roads.txt")
     roads = []
     line = f.readline()
     while line:
@@ -19,12 +19,12 @@ def main():
     fig = plt.figure()
     ax = fig.add_subplot(1, 1, 1)
     # Import location info
-    locations = pd.read_excel(sys.argv[1], sheet_name='Locations')
+    locations = pd.read_excel(excel, sheet_name='Locations')
     loc_x_coordinates = locations['X Coordinate'].values.tolist()
     loc_y_coordinates = locations['Y Coordinate'].values.tolist()
 
     # Import road material info
-    material = pd.read_excel(sys.argv[1], sheet_name='Road Material')
+    material = pd.read_excel(excel, sheet_name='Road Material')
     materials = material['Road Material'].values.tolist()
     for i in range(len(materials)):
         if materials[i] =='Asphalt':
@@ -37,7 +37,7 @@ def main():
             materials[i] = 'yellow'
 
     # Import storm info
-    storms = pd.read_excel(sys.argv[1], sheet_name='Storms')
+    storms = pd.read_excel(excel, sheet_name='Storms')
     st_x_coordinates = storms['X Coordinate'].values.tolist()
     st_y_coordinates = storms['Y Coordinate'].values.tolist()
     st_radius = storms['Radius'].values.tolist()
@@ -78,9 +78,8 @@ def main():
     ax.grid(which='major', alpha=0.5)
 
     plt.scatter(loc_x_coordinates, loc_y_coordinates, s=10)
-
     plt.grid(True)
-    plt.show()
+    plt.savefig('route.png')
 
 if __name__ == "__main__":
     main()

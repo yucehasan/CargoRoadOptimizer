@@ -4,7 +4,7 @@
     },
     "console": {
         "@expanded": true,
-        "@height": 384.60003662109375,
+        "@height": 341.60003662109375,
         "@maximized": "false",
         "json()": {
             "meta": {
@@ -20,8 +20,7 @@
                     "path": "",
                     "className": [
                         "tab2",
-                        "focus",
-                        "running"
+                        "focus"
                     ],
                     "document": {
                         "changed": false,
@@ -29,47 +28,18 @@
                             "timestamp": 1596617675065
                         },
                         "filter": true,
-                        "title": "IE400Project.mos - Running",
-                        "tooltip": "IE400Project.mos - Running",
+                        "title": "IE400Project.mos - Stopped",
+                        "tooltip": "IE400Project.mos - Stopped",
                         "output": {
                             "id": "output180830",
                             "width": 1304,
-                            "height": 353,
+                            "height": 310,
                             "config": {
                                 "runner": "Mosel",
                                 "command": "IE400Project.mos",
                                 "debug": false,
                                 "toolbar": true,
                                 "name": ""
-                            },
-                            "running": {
-                                "pid": -56,
-                                "name": "output180830",
-                                "running": 2,
-                                "runner": [
-                                    {
-                                        "caption": "Mosel",
-                                        "cmd": [
-                                            "C:\\xpressmp\\workbench\\.c9\\node.exe",
-                                            "C:\\xpressmp\\workbench\\.c9\\node_modules\\mosel-runner\\bin\\mosel-runner",
-                                            "run",
-                                            "${debug?--debug=6167}",
-                                            "--basedir",
-                                            "$project_path",
-                                            "$file",
-                                            "--stack-trace=20",
-                                            "$args"
-                                        ],
-                                        "cmdCleanup": [
-                                            "true"
-                                        ],
-                                        "debugger": "mosel",
-                                        "debugport": 6167,
-                                        "selector": "\\.(mos|py)$",
-                                        "$builtin": true
-                                    }
-                                ],
-                                "debug": false
                             }
                         }
                     },
@@ -87,19 +57,19 @@
             "@ace": 1,
             "@acestatus": 1,
             "@base-step-wizard": 2,
-            "@divider": 5,
-            "@document": 7,
+            "@divider": 4,
+            "@document": 4,
             "@editorswitch": 1,
             "@fico.mosel.debugger.array.model": 4,
             "@fico.vdl.attributes-panel": 1,
             "@fico.vdl.palette-panel": 1,
             "@form": 4,
-            "@menu": 6,
-            "@menuitem": 15,
+            "@menu": 3,
+            "@menuitem": 8,
             "@pane": 2,
-            "@session": 6,
-            "@tab": 7,
-            "@undoManager": 7,
+            "@session": 3,
+            "@tab": 4,
+            "@undoManager": 4,
             "@welcome": 1
         }
     },
@@ -113,10 +83,10 @@
     "local": {
         "window": {
             "@fullscreen": false,
-            "@maximized": true,
-            "@minimized": false,
-            "@position": "168:9",
-            "@size": "1202:766"
+            "@maximized": false,
+            "@minimized": true,
+            "@position": "168:8",
+            "@size": "1186:731"
         }
     },
     "menus": {
@@ -179,13 +149,15 @@
             ]
         }
     },
+    "recentfiles": {
+        "json()": []
+    },
     "tabs": {
         "json()": {
             "focus": "/IE400Project.mos",
             "meta": {
                 "accessList": [
                     "tab1",
-                    "tab6",
                     "tab0"
                 ]
             },
@@ -204,7 +176,7 @@
                             "welcome": true,
                             "newOnError": true,
                             "newfile": true,
-                            "timestamp": 1596617747824
+                            "timestamp": 1596709477496
                         },
                         "filter": true,
                         "title": "Welcome",
@@ -226,7 +198,8 @@
                     "document": {
                         "changed": false,
                         "meta": {
-                            "ignoreState": 0
+                            "ignoreState": 0,
+                            "timestamp": 1596710500866
                         },
                         "filter": true,
                         "title": "IE400Project.mos",
@@ -235,88 +208,6 @@
                     },
                     "editorType": "ace",
                     "active": true
-                },
-                {
-                    "type": "tab",
-                    "name": "tab6",
-                    "path": "",
-                    "className": [
-                        "tab6"
-                    ],
-                    "document": {
-                        "changed": false,
-                        "meta": {
-                            "timestamp": 1596623579566
-                        },
-                        "filter": true,
-                        "title": "Inspect: X_ij",
-                        "tooltip": "Inspect: X_ij",
-                        "moselarray": {
-                            "varInfo": {
-                                "expr": "X_ij",
-                                "type": {
-                                    "name": "array",
-                                    "element": {
-                                        "name": "mpvar",
-                                        "attributes": [
-                                            {
-                                                "name": "lb",
-                                                "type": {
-                                                    "name": "real"
-                                                }
-                                            },
-                                            {
-                                                "name": "name",
-                                                "type": {
-                                                    "name": "string"
-                                                }
-                                            },
-                                            {
-                                                "name": "rcost",
-                                                "type": {
-                                                    "name": "real"
-                                                }
-                                            },
-                                            {
-                                                "name": "sol",
-                                                "type": {
-                                                    "name": "real"
-                                                }
-                                            },
-                                            {
-                                                "name": "ub",
-                                                "type": {
-                                                    "name": "real"
-                                                }
-                                            }
-                                        ]
-                                    },
-                                    "indexes": [
-                                        {
-                                            "name": "locations",
-                                            "type": {
-                                                "name": "set",
-                                                "element": {
-                                                    "name": "integer"
-                                                }
-                                            }
-                                        },
-                                        {
-                                            "name": "locations",
-                                            "type": {
-                                                "name": "set",
-                                                "element": {
-                                                    "name": "integer"
-                                                }
-                                            }
-                                        }
-                                    ]
-                                }
-                            }
-                        }
-                    },
-                    "editorType": "moselarray",
-                    "active": false
                 }
             ],
             "skin": "editor_tab",
@@ -326,7 +217,7 @@
     },
     "tree_selection": {
         "json()": [
-            "/"
+            "/plot.py"
         ]
     },
     "welcome": {
